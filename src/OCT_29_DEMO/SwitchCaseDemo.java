@@ -25,7 +25,7 @@ public class SwitchCaseDemo {
             case 9:
             case 11:
                 System.out.println("30 days");
-                System.out.println();
+                System.out.println("Pushpinder");
 
             case 2:
                 System.out.println("38 days");
