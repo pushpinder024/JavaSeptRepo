@@ -4,17 +4,31 @@ import java.util.Arrays;
 
 public class codingBatStarOut {
     public static void main(String[] args) {
-        byte[] bytes = new byte[3]; // byte array
-        bytes[0] =80;
-        bytes[1] =80;
-        bytes[2] = 80;
+starOut("ab**cd");
 
-        char[] convertedChar = new char[bytes.length];
-        for(int i=0;i < bytes.length;i++){
-            convertedChar[i]=(char)bytes[i];
-        }
-        System.out.println(Arrays.toString(convertedChar));
-        String charArray = new String(convertedChar);
-        System.out.println(charArray);
     }
+
+    public  static String starOut(String str) {
+        int len = str.length();
+        String finalString = "";
+        for (int i = 0; i < len; i++) {
+
+            if (i == 0 && str.charAt(i) != '*') {
+                finalString += str.charAt(i);
+            }
+
+            if (i > 0 && str.charAt(i) != '*' && str.charAt(i - 1) != '*') {
+                finalString += str.charAt(i);
+            }
+
+            if (i > 0 && str.charAt(i) == '*' && str.charAt(i - 1) != '*') {
+                finalString = finalString.substring(0, finalString.length() - 1);
+            }
+
+        }
+        System.out.println(finalString);
+        return finalString;
+    }
+
+
 }

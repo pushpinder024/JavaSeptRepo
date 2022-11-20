@@ -3,6 +3,7 @@ package practice;
 public class codingBatPlusOut {
     public static void main(String[] args) {
         String ss = "breadwksdfbwskhfabreadbkkhfgsdlakfbreadvsddg";
+        ss.replace("bad","");
         System.out.println(ss.lastIndexOf("bread"));
 
         plusOut("vuakjDYCgadycbadvskcgaidcbad","bad");
