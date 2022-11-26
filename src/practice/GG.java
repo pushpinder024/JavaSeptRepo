@@ -10,9 +10,11 @@ public class GG {
     }
 
 
-
-    public String method(Integer value){
+    public String method(Integer value) {
 
         return null;
     }
 }
+
+
+
