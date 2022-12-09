@@ -10,7 +10,6 @@ public class stringBuilderANDstringBuffer {
         System.out.println(a);
 
 
-
         StringBuffer b = new StringBuffer("Push");                  //THREAD SAFE
         b.append("pin");
         b.append("der S");

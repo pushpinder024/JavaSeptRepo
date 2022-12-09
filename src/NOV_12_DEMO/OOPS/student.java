@@ -7,9 +7,9 @@ public class student {
     int grade;
 
     public void getInfo() {
-        System.out.println("Student name is "+name);
-        System.out.println("Student id is " + id);
-        System.out.println("Student grade is " +grade);
+        System.out.println("StudentDemo name is "+name);
+        System.out.println("StudentDemo id is " + id);
+        System.out.println("StudentDemo grade is " +grade);
         System.out.println("The college name is " + collegeName);
     }
 }
