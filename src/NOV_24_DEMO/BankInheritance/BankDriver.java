@@ -18,6 +18,7 @@ public class BankDriver {
         bank2.setCustomerID(105);
         bank2.setBalance(35000);
         System.out.println(bank2.withDrawal(3000));
+        System.out.println(bank2.deposit(20000));
         System.out.println(bank2);
 
 

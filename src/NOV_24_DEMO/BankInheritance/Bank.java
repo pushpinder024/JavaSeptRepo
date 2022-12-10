@@ -3,7 +3,7 @@ package NOV_24_DEMO.BankInheritance;
 public class Bank {
     private String firstName;
     private String lastName;
-    private int  customerID;
+    private int customerID;
     private int balance;
 
     public Bank() {

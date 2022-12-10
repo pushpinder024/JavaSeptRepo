@@ -1,61 +1,55 @@
 package NOV_26_DEMO.PolymorphismInheritanceDemo;
 
-public class ChequingAccount extends BankAccount {
-    private float chequingAccountBalance;
-    private float withdrawalAmount;
-    private float depositAmount;
-    private float finalChequingAfterTransactions;
+public class ChequingAccount extends Bank{
+    private long chequingAccountBalance;
+    private String ChequingAccoutNumber;
 
-    public float getChequingAccountBalance() {
+    public long getChequingAccountBalance() {
         return chequingAccountBalance;
     }
 
-    public void setChequingAccountBalance(float chequingAccountBalance) {
+    public void setChequingAccountBalance(long chequingAccountBalance) {
         this.chequingAccountBalance = chequingAccountBalance;
     }
 
-    public float getWithdrawalAmount() {
-        return withdrawalAmount;
+    public String getChequingAccoutNumber() {
+        return ChequingAccoutNumber;
     }
 
-    public void setWithdrawalAmount(float withdrawalAmount) {
-        this.withdrawalAmount = withdrawalAmount;
+    public void setChequingAccoutNumber(String chequingAccoutNumber) {
+        ChequingAccoutNumber = chequingAccoutNumber;
     }
 
-    public float getDepositAmount() {
-        return depositAmount;
+    public ChequingAccount(String firstName, String lastName, String bankAccountNumber, long chequingAccountBalance, String chequingAccoutNumber) {
+        super(firstName, lastName, bankAccountNumber);
+        this.chequingAccountBalance = chequingAccountBalance;
+        ChequingAccoutNumber = chequingAccoutNumber;
     }
 
-    public void setDepositAmount(float depositAmount) {
-        this.depositAmount = depositAmount;
+
+    @Override
+    public long deposit(long mainBalance, long depositAmount) {
+         mainBalance = chequingAccountBalance + depositAmount;
+         setChequingAccountBalance(mainBalance);
+         return getChequingAccountBalance();
     }
 
     @Override
-    public float withdrawal(float chequingAccountBalance, float withdrawalAmount) {
-
-        if (chequingAccountBalance < withdrawalAmount) {
-            System.out.println("Not sufficient Balance. Chequing account balance remains unchanged");
-
-        } else {
-            chequingAccountBalance = chequingAccountBalance - withdrawalAmount;
-            finalChequingAfterTransactions = chequingAccountBalance;
-        }
-        return finalChequingAfterTransactions;
-
-
+    public long withdrawal(long mainBalance, long withdrawalAmount) {
+        mainBalance = chequingAccountBalance -withdrawalAmount;
+        setChequingAccountBalance(mainBalance);
+        return getChequingAccountBalance();
     }
 
-    @Override
-    public float deposit(float chequingAccountBalance, float depositAmount) {
-        finalChequingAfterTransactions = chequingAccountBalance + depositAmount;
-        return finalChequingAfterTransactions;
-    }
 
     @Override
-    public void description() {
-         super.description();
-        System.out.println("Chequing Account Balance = " + finalChequingAfterTransactions);
-
+    public String toString() {
+        return "ChequingAccount{" +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", bankAccountNumber='" + getBankAccountNumber() + '\'' +
+                "chequingAccountBalance=" + chequingAccountBalance +
+                ", ChequingAccoutNumber='" + ChequingAccoutNumber + '\'' +
+                '}';
     }
 }
-

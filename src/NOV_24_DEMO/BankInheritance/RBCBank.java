@@ -25,6 +25,11 @@ public class RBCBank extends Bank {
         }
         return super.getBalance();
     }
+    public int deposit(int depositAmount){
+        int newBalance =   super.getBalance() + depositAmount;
+        super.setBalance(newBalance);
+        return super.getBalance();
+    }
 
 
     @Override
