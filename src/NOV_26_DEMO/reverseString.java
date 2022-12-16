@@ -4,7 +4,16 @@ import java.util.Arrays;
 
 public class reverseString {
     public static void main(String[] args) {
-        String name = "Pushpinder";
+
+
+
+
+        System.out.println(new String(reverseString("Pushpinder")));
+
+    }
+
+    public static char[] reverseString(String name) {
+
         char[] name1 = name.toCharArray();
 
         int start = 0;
@@ -14,12 +23,11 @@ public class reverseString {
 
             temp = name1[end];
             name1[end] = name1[start];
-            name1[start] =  temp;
+            name1[start] = temp;
             start++;
             end--;
 
-
         }
-        System.out.println(new String(name1));
+        return name1;
     }
 }

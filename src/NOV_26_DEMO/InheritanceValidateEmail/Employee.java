@@ -5,6 +5,8 @@ public class Employee extends Person{
     private String emailID;
     private String designation;
 
+public Integer name1(){
+    return 1;}
 
 
     public Employee(String firstName, String lastName, int age, char gender, int employeeID, String emailID,String designation){
