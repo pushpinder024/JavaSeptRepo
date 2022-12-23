@@ -113,9 +113,7 @@ public class MainDriver {
         System.out.println("Your grand total is: " + total);
 
 
-
-
-        System.out.println("Proceeding to payment page.......");
+        System.out.println("Proceeding to the payment page.......");
         paymentAuthorization(sc);
     }
 

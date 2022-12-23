@@ -3,7 +3,7 @@ package DEC_03_DEMO.TimHortonsAssignment;
 public class CoffeeMug implements TimMerch{
     @Override
     public String getName() {
-        return "Coffe Mug";
+        return "Coffee Mug";
     }
 
     @Override

@@ -5,6 +5,11 @@ public class Bank {
     private String lastName;
     private String bankAccountNumber;
 
+
+    public Bank(){
+
+    }
+
     public Bank(String firstName, String lastName, String bankAccountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
