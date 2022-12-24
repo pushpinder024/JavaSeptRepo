@@ -2,6 +2,7 @@ package DEC_03_DEMO.TimHortonsAssignment;
 
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,7 +20,19 @@ public class MainDriver {
 
         while (validate.equals("YES")) {
             System.out.println("What would you like to order : Press 1 for Merch or Press 2 for Consumables");
-            int choice = sc.nextInt();
+
+
+            int choice = 0;
+//            try {
+//                choice = sc.nextInt();
+//            } catch (InputMismatchException e) {
+//
+//
+//                System.out.println("Please enter only integer value");
+//                choice = sc.nextInt();
+//            }
+            choice =  sc.nextInt();
+
 
 
             if (choice == 1) {
@@ -105,18 +118,19 @@ public class MainDriver {
             System.out.println("Do you want to order anything else : YES or NO");
             validate = sc.next();
         }
-        System.out.println("Here a list of total items ordered \n*********************");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        if (total > 0) {
+            System.out.println("Here a list of total items ordered \n*********************");
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(list.get(i));
+            }
+            System.out.println("*********************");
+            System.out.println("Your grand total is: " + total);
+
+
+            System.out.println("Proceeding to the payment page.......");
+            paymentAuthorization(sc);
         }
-        System.out.println("*********************");
-        System.out.println("Your grand total is: " + total);
-
-
-        System.out.println("Proceeding to the payment page.......");
-        paymentAuthorization(sc);
     }
-
 
     public static void paymentAuthorization(Scanner sc) {
         System.out.println("Please enter the credit card number");

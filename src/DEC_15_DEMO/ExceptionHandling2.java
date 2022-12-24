@@ -13,7 +13,11 @@ public class ExceptionHandling2 {
         }
 
         catch(Exception are){
+            System.out.println("Arithmetic Exception");
             are.printStackTrace();
+        }
+        finally{
+            System.out.println(a/b);
         }
 
 
