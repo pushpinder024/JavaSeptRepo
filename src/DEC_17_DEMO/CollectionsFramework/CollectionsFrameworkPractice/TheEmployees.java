@@ -59,20 +59,6 @@ public class TheEmployees implements Comparable {
     }
 
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        TheEmployees that = (TheEmployees) o;
-        return getEmpID().equals(that.getEmpID()) && getFirstName().equals(that.getFirstName()) && getLastName().equals(that.getLastName()) && getSalary().equals(that.getSalary()) && getPhoneNo().equals(that.getPhoneNo());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getEmpID(), getFirstName(), getLastName(), getSalary(), getPhoneNo());
-    }
-
     @Override
     public String toString() {
         return "TheEmployees{" +
@@ -84,13 +70,23 @@ public class TheEmployees implements Comparable {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
 
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TheEmployees that = (TheEmployees) o;
+        return Objects.equals(getEmpID(), that.getEmpID());
+    }
+
+    //    @Override
+//    public int hashCode() {
+//        return Objects.hash(getEmpID(), getFirstName(), getLastName(), getSalary(), getPhoneNo());
+//    }
     @Override
     public int compareTo(Object o) {
-        if ((getEmpID().equals(getEmpID()))) {
-            return 0;
-        } else
-                return 0;
-        }
+
+        return -1;
     }
+}
 

@@ -17,23 +17,25 @@ public class MainDriver {
         Scanner sc = new Scanner(System.in);
         System.out.println("Do you want to order: YES or NO");
         String validate = sc.next();
+        int b = 5;
 
         while (validate.equals("YES")) {
             System.out.println("What would you like to order : Press 1 for Merch or Press 2 for Consumables");
 
 
             int choice = 0;
-//            try {
-//                choice = sc.nextInt();
-//            } catch (InputMismatchException e) {
-//
-//
-//                System.out.println("Please enter only integer value");
-//                choice = sc.nextInt();
-//            }
-            choice =  sc.nextInt();
+            try {
+                choice = sc.nextInt();
+
+                b= b+1;
+
+            } catch (InputMismatchException e) {
 
 
+                System.out.println("Please enter only integer value");
+                //choice = sc.nextInt();
+
+            }
 
             if (choice == 1) {
                 System.out.println("Which item from our Merch would you like to order: \n" +
