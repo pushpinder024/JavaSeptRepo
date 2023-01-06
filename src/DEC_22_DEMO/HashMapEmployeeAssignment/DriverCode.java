@@ -27,10 +27,8 @@ public class DriverCode {
         System.out.println(HashmapOfEmployees);
 
 
-
         doubleTheSalary(HashmapOfEmployees, e6);
         doubleTheSalary(HashmapOfEmployees, e7);
-
         System.out.println(HashmapOfEmployees);
 
 
@@ -41,24 +39,17 @@ public class DriverCode {
     }
 
 
-
-    public static void doubleTheSalary( Map<EmployeesClass, Integer> HashmapOfEmployees, EmployeesClass e) {
-
+    public static void doubleTheSalary(Map<EmployeesClass, Integer> HashmapOfEmployees, EmployeesClass e) {
         Set<Map.Entry<EmployeesClass, Integer>> employeeNameAndSalarySet = HashmapOfEmployees.entrySet();
-
         Iterator<Map.Entry<EmployeesClass, Integer>> employeeIterator = employeeNameAndSalarySet.iterator();
 
-        Map.Entry<EmployeesClass, Integer> employeeNextObject = employeeIterator.next();
-
         while (employeeIterator.hasNext()) {
+            Map.Entry<EmployeesClass, Integer> employeeNextObject = employeeIterator.next();
+
             if (employeeNextObject.getKey().equals(e)) {
-                HashmapOfEmployees.put(e, employeeNextObject.getValue()*2);
-
-                employeeNextObject = employeeIterator.next();
+                HashmapOfEmployees.put(e, employeeNextObject.getValue() * 2);
 
 
-            } else {
-                employeeNextObject = employeeIterator.next();
             }
         }
 

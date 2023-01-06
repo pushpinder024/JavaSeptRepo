@@ -32,7 +32,7 @@ public class IntentionallyThrowingException {
 
     public static void exceptionDemo1(Scanner a) throws RuntimeException {                  //narrowest exception class type
         if (a.nextInt() == 12) {
-            throw new ArithmeticException("This message is coming from Exception Demo 1 method");
+            throw new ArithmeticException("This message is coming from Exception ImportantFunctionalInterfaces 1 method");
         }
     }
 
