@@ -24,17 +24,17 @@ public class MainDriver {
 //        System.out.println(dishList);
 //
 //
-//        List<String> stringList = dishes.stream().filter(d -> d.getCalories() <= 700).map(d -> d.getDishName()).distinct().collect(Collectors.toList());
-//        System.out.println(stringList);
+        List<String> stringList = dishes.stream().filter(d -> d.getCalories() <= 700).map(d -> d.getDishName()).distinct().collect(Collectors.toList());
+        System.out.println(stringList);
 
-        List<Dish> dishes1 = dishes.stream()
-                .filter(d -> d.getCalories() <= 700)
-                .map( (d) -> {
-            d.setDishName("CommonName");
-            return d;
-        }
-        )
-                .collect(Collectors.toList());
-        System.out.println(dishes1);
+//        List<Dish> dishes1 = dishes.stream()
+//                .filter(d -> d.getCalories() <= 700)
+//                .map( (d) -> {
+//            d.setDishName("CommonName");
+//            return d;
+//        }
+//        )
+//                .collect(Collectors.toList());
+//        System.out.println(dishes1);
     }
 }

@@ -15,14 +15,12 @@ public class ImportantFunctionalInterfaces {
         System.out.println(func1.apply("Pushpinder"));
 
 
-
         //Predicate     ------    Boolean type output
         Predicate<String> pred = ImportantFunctionalInterfaces::test;
         System.out.println(pred.test("Pushpinder"));
 
         Predicate<String> pred1 = s -> s.length() > 10;
         System.out.println(pred1.test("Pushpinder"));
-
 
 
         //  practice     ---covert String to integer
@@ -34,8 +32,6 @@ public class ImportantFunctionalInterfaces {
         System.out.println(funct1.apply("1") + 22);
 
 
-
-
         //consumers    ---- input type T and no return type
 
         Consumer<String> consumer = x -> System.out.println(x);
@@ -45,18 +41,12 @@ public class ImportantFunctionalInterfaces {
         consumerw.accept("Pushpinder");
 
 
-
-
-
         //bi-consumers    ---- two type T inputs and no return type
         BiConsumer<String, String> biConsumer = (a, b) -> method7(a, b);
         biConsumer.accept("Pushpinder ", "Singh");
 
         BiConsumer<String, String> biConsumer1 = ImportantFunctionalInterfaces::method7;
         biConsumer1.accept("Pushpinder ", "Singh");
-
-
-
 
 
         //Suppliers      ----- no input and return type T

@@ -7,7 +7,7 @@ public class CalculateInterfaceDriver {
         CalculateInterface c1 =  (w, r) -> w+r;
                               //----------------\\    <------ This whole implementation can also be called as a FUNCTION.
         //                    \\----------------//    <------ This whole implementation can also be called as a FUNCTION.
-
+        System.out.println(c1.addition(5, 5));
 
 
         calc((w, r) -> w+r);
